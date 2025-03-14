@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #EEE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #1E88E5, #D81B60);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #FFF;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .header a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .container {
+            background-color: #1E1E1E;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 80px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        h2 {
+            color: #FF4081;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #BBB;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background: #333;
+            color: white;
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #FF4081;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #E91E63;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/products/list">Product List</a>
+        <a href="/users/login">Login</a>
+        <a href="/users/register">Register</a>
+        <a href="/users/logout">Logout</a>
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form th:action="@{/users/login}" method="post">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+</body>
+
+</html>
