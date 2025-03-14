@@ -7,8 +7,6 @@ This is a **web-based Order Management System** that allows users to **view prod
 - **Spring Boot** (Backend Framework)
 - **MySQL** (Database)
 
-## 📂 Project Structure
-
 ## 🚀 Features
 - ✅ **View Products** – Browse all available products.
 - ✅ **Product Details** – Check descriptions, ratings, and availability.
