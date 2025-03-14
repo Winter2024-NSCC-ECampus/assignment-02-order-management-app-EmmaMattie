@@ -5,8 +5,6 @@ This is a **web-based Order Management System** that allows users to **view prod
 
 ## 🛠️ Technologies Used
 - **Spring Boot** (Backend Framework)
-- **JSP + Thymeleaf** (Frontend)
-- **JPA + Hibernate** (Database Management)
 - **MySQL** (Database)
 
 ## 📂 Project Structure
